@@ -1,18 +1,19 @@
 import * as React from 'react';
 import { View, Text, StyleSheet} from 'react-native';
 import {  Checkbox, Box } from 'native-base';
+import { color } from 'react-native-reanimated';
 
 
 const Itemm = ({ title, price, id }) => {
     return (
         <View style={{
-            marginVertical: 13,
+            marginVertical: 3,
             paddingHorizontal: 30,
             paddingVertical: 15,
             
         }}>
 
-            <View style={{width:'100%',flexDirection:'row',backgroundColor:'green'}}>
+            <View style={{width:'100%',flexDirection:'row'}}>
                 <Checkbox 
                 style={{
                     fontSize: 17,
@@ -32,10 +33,10 @@ const Itemm = ({ title, price, id }) => {
                     <Text style={{
                         fontSize: 17,
                         fontWeight: '700',
-                        color: 'black',
-                        paddingRight:25
+                        paddingRight:25,
+                        color: price > 0 ? `#009BFC` : `#FF4500`
                     }}>
-                        700
+                        {price > 0 ? `₹${price}` : `-₹${Math.abs(price)}`}
                     </Text>
                 </Box>
             </View>

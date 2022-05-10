@@ -6,6 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { NativeBaseProvider, Button, Container, CheckBox, Body, Right } from 'native-base';
 import Animated from 'react-native-reanimated';
 import Itemm from './Item';
+import { useSelector } from 'react-redux';
 
 const DATA = [
   {
@@ -26,6 +27,10 @@ const DATA = [
 
 
 export default function HomeScreen({ navigation }) {
+
+  const {transactions} = useSelector((state)=>state.transactions)
+
+
   return (
     <Container style={{flex:1,justifyContent:'center',alignItems:'center'}}>
       <Animated.View style={{
@@ -76,18 +81,18 @@ export default function HomeScreen({ navigation }) {
           </View>
         </LinearGradient>
       </Animated.View>
-      <View style={{ flex: 1,width:'100%'}}>
+      <View style={{ flex: 1,width:'100%',marginTop:-170}}>
         {/* <View style={{alignItems:'center',marginTop:30}}>
           <Text style={{ color: 'black', fontWeight: '700',fontSize:20 }}>
             No transaction yet
           </Text>
         </View> */}
         <FlatList 
-          data={DATA}
+          data={transactions}
           renderItem={({item})=>(
             <Itemm title={item.title} price={item.price} id={item.id}/>
           )}
-          keyExtractor={(item)=>item.id}
+          keyExtractor={(item)=>item.id.toString()}
         />
       </View>
     </Container>
