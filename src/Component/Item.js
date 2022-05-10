@@ -1,10 +1,15 @@
 import * as React from 'react';
 import { View, Text, StyleSheet} from 'react-native';
 import {  Checkbox, Box } from 'native-base';
-import { color } from 'react-native-reanimated';
+import { useDispatch } from 'react-redux';
+
+import { deletTransaction } from '../store/actions/TransactionAction';
 
 
 const Itemm = ({ title, price, id }) => {
+
+    const dispatch = useDispatch();
+
     return (
         <View style={{
             marginVertical: 3,
@@ -15,6 +20,9 @@ const Itemm = ({ title, price, id }) => {
 
             <View style={{width:'100%',flexDirection:'row'}}>
                 <Checkbox 
+                onPress={()=>{
+                    dispatch(deletTransaction(id));
+                }}
                 style={{
                     fontSize: 17,
                     fontWeight: '700',

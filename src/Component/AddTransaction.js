@@ -1,10 +1,42 @@
 
-import * as React from 'react';
+import React,{useState} from 'react';
 import { View, Text,StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import { Container,Box,Input, } from 'native-base';
 
+//Redux
+import { useDispatch } from 'react-redux';
+
+import {addTransaction} from '../store/actions/TransactionAction';
+
+
 
 export default function AddTransaction() {
+
+    const dispatch = useDispatch();
+
+
+    const [title,setTitle] = useState('');
+    const [price,setPrice] = useState('');
+
+    function submit(){
+        if(!title || !price){
+            return alert('Please fill all the fields');
+        }
+        console.log('runn');
+        const id = Math.floor(Math.random()*600000);
+
+        const newTransaction = {
+            id,
+            title,
+            price: +price,
+        };
+
+        dispatch(addTransaction({...newTransaction}));
+        console.log('runn');
+
+    }
+
+
   return (
     // <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center',backgroundColor:'red' }}>
     //   <Text>Add Transaction</Text>
@@ -24,10 +56,7 @@ export default function AddTransaction() {
         Enter Expense Title
     </Text>
     <TextInput style={styles.inputStyle}
-        // autoCapitalize='none'
-        // autoCorrect={false}
-        // value={username}
-        // onChangeText={(boxValue) => setUsername(boxValue)} 
+        onChangeText={(boxValue) => setTitle(boxValue)} 
         />
 </View>
 
@@ -36,27 +65,16 @@ export default function AddTransaction() {
         Enter Expense Price
     </Text>
     <TextInput style={styles.inputStyle}
-        // autoCapitalize='none'
-        // autoCorrect={false}
-        // secureTextEntry={true}
-        // value={password}
-        // onChangeText={(boxValue) => setPassword(boxValue)} 
+        
+        onChangeText={(boxValue) => setPrice(boxValue)} 
+        keyboardType = 'numeric'
         />
 </View>
-<View style={styles.Wrapper}>
-    {/* <Checkbox
-        value={agree}
-        onValueChange={() => setAgree(!agree)}
-    /> */}
-    {/* <Text style={styles.WrapperText}>I have read and agree with SJ</Text> */}
-</View>
 <TouchableOpacity
-    // style={[styles.buttons, { backgroundColor: agree ? "#628ff0" : "gray" }]}
-    // disabled={!agree}
-    // onPress={() => submit()}
+    onPress={() => submit()}
     style={styles.buttons}
     >
-    <Text style={styles.buttonsText}>Login</Text>
+    <Text style={styles.buttonsText}>ADD</Text>
 </TouchableOpacity>
 </View>
 
@@ -115,7 +133,7 @@ const styles = StyleSheet.create({
       paddingLeft: 10,
   },
   buttons: {
-      // backgroundColor:'#',
+      backgroundColor:"#628ff0",
       marginLeft: 45,
       marginRight: 65,
       padding: 10,
