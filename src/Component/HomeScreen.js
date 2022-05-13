@@ -19,7 +19,8 @@ export default function HomeScreen({ navigation }) {
 
 
   return (
-    <Container style={{ flex: 1, justifyContent: 'center', alignItems: 'center',width:'100%' }}>
+    // <Container style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: '100%' }}>
       <Animated.View style={{
         flex: 1,
         width: '100%',
@@ -28,7 +29,7 @@ export default function HomeScreen({ navigation }) {
         paddingHorizontal: 20
 
       }}>
-        <Cardd navigation={ navigation } />
+        <Cardd navigation={navigation} />
       </Animated.View>
       <View style={{ flex: 1, width: '100%', marginTop: -170 }}>
         {
@@ -43,6 +44,8 @@ export default function HomeScreen({ navigation }) {
 
 
       </View>
-    </Container>
+
+      </View>
+    // </Container>
   );
 }
