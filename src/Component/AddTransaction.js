@@ -1,11 +1,10 @@
 
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-// import { Container, Box, Input, } from 'native-base';
+
 
 //Redux
 import { useDispatch } from 'react-redux';
-
 import { addTransaction } from '../store/actions/TransactionAction';
 
 
@@ -39,29 +38,34 @@ export default function AddTransaction() {
 
     return (
 
-        // <Container>
-            <View style={styles.mainContainer}>
-                <Text style={styles.mainHeader}>Login Form</Text>
-                <Text style={styles.description}>You can reach us anytime</Text>
-                <View style={styles.inputContainer}>
-                    <Text style={styles.Lable}>
-                        Enter Expense Title
-                    </Text>
-                    <TextInput style={styles.inputStyle}
-                        onChangeText={(boxValue) => setTitle(boxValue)}
-                    />
-                </View>
+        // main container
+        <View style={styles.mainContainer}>
+            <Text style={styles.mainHeader}>ADD Transaction</Text>
 
-                <View style={styles.inputContainer}>
-                    <Text style={styles.Lable}>
-                        Enter Expense Price
-                    </Text>
-                    <TextInput style={styles.inputStyle}
+            {/* First input field for adding transaction name */}
+            <View style={styles.inputContainer}>
+                <Text style={styles.Lable}>
+                    Enter Expense Title
+                </Text>
+                <TextInput style={styles.inputStyle}
+                    onChangeText={(boxValue) => setTitle(boxValue)}
+                />
+            </View>
 
-                        onChangeText={(boxValue) => setPrice(boxValue)}
-                        keyboardType='numeric'
-                    />
-                </View>
+            {/* Second input field for adding transaction value */}
+            <View style={styles.inputContainer}>
+                <Text style={styles.Lable}>
+                    Enter Expense Price
+                </Text>
+                <TextInput style={styles.inputStyle}
+
+                    onChangeText={(boxValue) => setPrice(boxValue)}
+                    keyboardType='numeric'
+                />
+            </View>
+
+            {/* Button for adding the values in storage */}
+            <View style={{paddingTop:35}}>
                 <TouchableOpacity
                     onPress={() => submit()}
                     style={styles.buttons}
@@ -69,9 +73,7 @@ export default function AddTransaction() {
                     <Text style={styles.buttonsText}>ADD</Text>
                 </TouchableOpacity>
             </View>
-
-        // </Container>
-
+        </View>
     );
 }
 
@@ -81,7 +83,7 @@ const styles = StyleSheet.create({
         height: '100%',
         paddingHorizontal: 30,
         paddingTop: 30,
-        backgroundColor: '#fff'
+        backgroundColor: '#b9cded'
     },
     mainHeader: {
         fontSize: 25,
@@ -114,7 +116,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15,
         paddingVertical: 7,
         borderRadius: 1,
-        fontSize: 18
+        fontSize: 18,
+
     },
     Wrapper: {
         paddingTop: 25,
@@ -125,12 +128,15 @@ const styles = StyleSheet.create({
         paddingLeft: 10,
     },
     buttons: {
+
         backgroundColor: "#628ff0",
         marginLeft: 45,
         marginRight: 65,
         padding: 10,
+        paddingTop: 15,
     },
     buttonsText: {
+
         color: '#fff',
         textAlign: 'center',
         fontSize: 15,
