@@ -27,4 +27,4 @@ Instructions : (For clone this project into your device)
 
 # Video of the project :p
 
-https://github.com/Jauhari-01/SpendTracker/blob/main/WhatsApp%20Video%202022-05-29%20at%2012.15.54%20PM.mp4
+![video](https://github.com/Jauhari-01/SpendTracker/blob/main/WhatsApp%20Video%202022-05-29%20at%2012.15.54%20PM.mp4)
