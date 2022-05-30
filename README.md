@@ -24,7 +24,11 @@ Instructions : (For clone this project into your device)
 
 ![Screenshot](https://github.com/Jauhari-01/SpendTracker/blob/main/WhatsApp%20Image%202022-05-25%20at%2011.15.44%20PM%20(3).jpeg)
 
-
 # Video of the project :p
 
-<video src="https://github.com/Jauhari-01/SpendTracker/blob/main/WhatsApp%20Video%202022-05-29%20at%2012.15.54%20PM.mp4"></video>
+https://user-images.githubusercontent.com/90859295/170957341-e029b891-e93f-46a0-85f8-4b4e1bd4a934.mp4
+
+
+
+
+
