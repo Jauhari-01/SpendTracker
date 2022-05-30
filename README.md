@@ -15,20 +15,14 @@ Instructions : (For clone this project into your device)
         
 {ScreenShot of the app}
         
+![11](https://user-images.githubusercontent.com/90859295/170958788-e7e90b1e-0792-4914-9dc7-584153017c5d.jpeg)
 
-![Screenshot](https://github.com/Jauhari-01/SpendTracker/blob/main/WhatsApp%20Image%202022-05-25%20at%2011.15.44%20PM.jpeg)
+![22](https://user-images.githubusercontent.com/90859295/170958908-d8638346-ec4f-467b-801e-1100fb562f0e.jpeg)
 
-![Screenshot](https://github.com/Jauhari-01/SpendTracker/blob/main/WhatsApp%20Image%202022-05-25%20at%2011.15.44%20PM%20(1).jpeg)
+![33](https://user-images.githubusercontent.com/90859295/170958942-b370ce98-9b6d-4870-8113-21bf88372251.jpeg)
 
-![Screenshot](https://github.com/Jauhari-01/SpendTracker/blob/main/WhatsApp%20Image%202022-05-25%20at%2011.15.44%20PM%20(2).jpeg)
+![44](https://user-images.githubusercontent.com/90859295/170958980-8622062a-83b1-4fbc-b78d-24a9a4735f9e.jpeg)
 
-![Screenshot](https://github.com/Jauhari-01/SpendTracker/blob/main/WhatsApp%20Image%202022-05-25%20at%2011.15.44%20PM%20(3).jpeg)
-
-# Video of the project :p
+# Video of the project
 
 https://user-images.githubusercontent.com/90859295/170957341-e029b891-e93f-46a0-85f8-4b4e1bd4a934.mp4
-
-
-
-
-
