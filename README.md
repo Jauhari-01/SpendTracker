@@ -1,4 +1,4 @@
-# SpendTracker
+## SpendTracker
 MiniProject(Android base project)
 
 
@@ -13,7 +13,7 @@ Instructions : (For clone this project into your device)
         for more information you can follow official documentation.
         
         
-{ScreenShot of the app}
+## ScreenShot of the app
         
 ![11](https://user-images.githubusercontent.com/90859295/170958788-e7e90b1e-0792-4914-9dc7-584153017c5d.jpeg)
 
@@ -23,6 +23,12 @@ Instructions : (For clone this project into your device)
 
 ![44](https://user-images.githubusercontent.com/90859295/170958980-8622062a-83b1-4fbc-b78d-24a9a4735f9e.jpeg)
 
-# Video of the project
+## Video of the project
 
 https://user-images.githubusercontent.com/90859295/170957341-e029b891-e93f-46a0-85f8-4b4e1bd4a934.mp4
+
+## PPT of the project
+[SpendTracker.pptx](https://github.com/Jauhari-01/SpendTracker/files/8926931/SpendTracker.pptx)
+
+
+
